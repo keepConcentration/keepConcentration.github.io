@@ -1,5 +1,6 @@
 title: keepConcentration
-description: Personal notes and posts
+description: 읽기 좋은 개발 문서로 쓰는 블로그
+tagline: 긴 글을 위한 여백, 사이드 네비, 코드 블록. 튜토리얼과 트러블슈팅 기록에 맞춘 레이아웃.
 url: "https://keepConcentration.github.io"
 baseurl: ""
 timezone: Asia/Seoul
@@ -13,3 +14,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - sketches

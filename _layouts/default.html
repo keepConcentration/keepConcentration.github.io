@@ -4,23 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   {% feed_meta %}
   {% seo %}
 </head>
 <body>
-  <header class="site-header">
-    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    <nav>
-      <a href="{{ '/' | relative_url }}">Posts</a>
-      <a href="{{ '/about/' | relative_url }}">About</a>
-    </nav>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="{{ '/' | relative_url }}"><i></i>{{ site.title }}</a>
+      <div class="nav-links">
+        <a href="{{ '/' | relative_url }}">Posts</a>
+        <a href="{{ '/about/' | relative_url }}">About</a>
+        <a href="{{ '/feed.xml' | relative_url }}" class="pill">RSS</a>
+      </div>
+    </div>
   </header>
-  <main class="content">
-    {{ content }}
-  </main>
-  <footer class="site-footer">
+  {{ content }}
+  <footer>
     <span>{{ site.description }}</span>
+    <span>Powered by Jekyll</span>
   </footer>
 </body>
 </html>
