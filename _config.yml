@@ -1,0 +1,15 @@
+title: keepConcentration
+description: Personal notes and posts
+url: "https://keepConcentration.github.io"
+baseurl: ""
+timezone: Asia/Seoul
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
