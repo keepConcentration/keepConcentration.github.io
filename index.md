@@ -34,6 +34,12 @@ title: Home
       <h2>Posts</h2>
     </div>
     <div class="grid">
+      {% if site.posts.size == 0 %}
+      <div class="empty-state">
+        <h3>No posts yet</h3>
+        <p>아직 발행된 글이 없습니다. <code>_posts/YYYY-MM-DD-title.md</code> 를 추가하면 여기에 표시됩니다.</p>
+      </div>
+      {% else %}
       {% for post in site.posts %}
       <a href="{{ post.url | relative_url }}" class="card" data-tags="{{ post.tags | join: ',' }}">
         <div class="meta">
@@ -50,6 +56,7 @@ title: Home
         {% endif %}
       </a>
       {% endfor %}
+      {% endif %}
     </div>
   </main>
 </div>

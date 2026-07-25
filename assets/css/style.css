@@ -520,3 +520,32 @@ footer {
   margin: 0 auto;
   padding: 2rem 1.25rem 4rem;
 }
+
+/* Empty state */
+.empty-state {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  background: var(--soft);
+  color: var(--muted);
+}
+.empty-state h3 {
+  color: var(--fg);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+.empty-state p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+.empty-state code {
+  font-family: var(--mono);
+  font-size: 0.85em;
+  background: #fff;
+  border: 1px solid var(--border2);
+  border-radius: 4px;
+  padding: 0.05rem 0.35rem;
+}
