@@ -8,7 +8,7 @@ permalink: /about/
   <div class="page-content">
     <h1 class="page-title">About</h1>
     <p>GitHub Pages 블로그입니다. 글은 <code>_posts/</code> 마크다운으로 관리합니다.</p>
-    <p>Mintlify 문서 스타일을 적용하여 읽기 좋은 개발 블로그를 지향합니다. 긴 글을 위한 여백, 사이드 네비게이션, 코드 블록 강조, 튜토리얼과 트러블슈팅 기록에 맞춘 레이아웃으로 구성되어 있습니다.</p>
+    <p>친구와의 대화, AI와의 협업, 컨퍼런스에서 배운 것들을 기록합니다.</p>
 
     <h2>기술 스택</h2>
     <ul>
