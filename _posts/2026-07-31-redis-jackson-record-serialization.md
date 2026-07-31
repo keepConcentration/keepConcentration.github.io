@@ -108,7 +108,7 @@ public class RecordSupportingTypeResolver extends DefaultTypeResolverBuilder {
 
 ```java
 BasicPolymorphicTypeValidator.builder()
-    .allowIfSubType("com.kb.wmslab.goods_wms")  // 도메인 record 타입
+    .allowIfSubType("com.example")  // 프로젝트 도메인
     .allowIfSubType("java.util")                // ArrayList 등 컬렉션
     .build()
 ```
