@@ -41,9 +41,11 @@ InvalidTypeIdException: Could not resolve type id '2953' as a subtype of `java.l
 Java Record는 컴파일러가 알아서 `final` 클래스로 만든다. Jackson의 `DefaultTyping.NON_FINAL`은 `useForType()`에서 final을 만나면 타입 메타데이터를 빼버린다.
 
 ```java
-// Jackson 내부 로직 (의사코드)
+// Jackson DefaultTyping.NON_FINAL 내부 로직 (의사코드)
 public boolean useForType(JavaType t) {
-    if (t.isFinal() && !t.isRecord()) return false;  // Record도 final이므로 제외됨
+    // final 클래스면 무조건 타입 정보 생략. Record도 final이니까 같이 걸린다.
+    // Jackson은 isRecord()를 따로 체크하지 않는다.
+    if (t.isFinal()) return false;
     return true;
 }
 ```
@@ -136,6 +138,10 @@ objectMapper.activateDefaultTyping(
 - `Collectors.toList()` → `java.util.ArrayList` (public 기본 생성자 있음)
 
 결과 JSON은 `["java.util.ArrayList", [...]]` 형태로 남고, 직렬화/역직렬화 왕복이 된다.
+
+### 덤으로 따라온 것: Redis 메모리 30% 절감
+
+이 과정에서 부수 효과가 하나 있었다. 기존에는 `EVERYTHING` 전략으로 모든 객체에 타입 메타데이터를 붙이고 있었는데, 패키지 기반 `PolymorphicTypeValidator`로 범위를 제한하고 `WRAPPER_ARRAY` 포맷으로 전환하면서 Redis에 저장되는 문자열 길이가 크게 줄었다. 결과적으로 Redis 메모리 사용량이 약 30% 절감됐다.
 
 ## Spring Data Redis #2697에서의 이야기
 
