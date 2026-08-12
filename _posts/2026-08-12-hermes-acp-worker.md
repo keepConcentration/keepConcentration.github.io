@@ -23,7 +23,7 @@ Hermes의 `copilot-acp` provider는 Copilot CLI나 Claude 계열 ACP agent와 JS
 
 대화형 환경에서는 사용자가 승인 버튼 누르면 끝이다. 근데 Discord gateway, cron, Kanban worker 같은 headless 환경에는 승인 창을 눌러 줄 사람이 없다.
 
-![ACP Permission Flow](/assets/acp-permission-flow.png)
+<img src="/assets/acp-permission-flow.png" alt="ACP Permission Flow" width="600" />
 
 당시 `agent/copilot_acp_client.py`의 처리는 단순했다.
 
