@@ -89,8 +89,8 @@ a {
   border: 0;
   cursor: pointer;
   border-radius: 9999px;
-  background: var(--fg);
-  color: #fff;
+  background: var(--green);
+  color: var(--fg);
   font-size: 0.9rem;
   font-weight: 500;
   padding: 0.45rem 1.1rem;
