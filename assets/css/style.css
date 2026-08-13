@@ -192,7 +192,11 @@ h1 {
   .shell {
     grid-template-columns: 1fr;
   }
+  .content {
+    order: 1;
+  }
   .side {
+    order: 2;
     display: flex;
     gap: 0.4rem;
     flex-wrap: wrap;
