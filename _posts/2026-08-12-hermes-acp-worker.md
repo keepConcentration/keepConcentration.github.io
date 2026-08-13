@@ -3,7 +3,7 @@ layout: post
 title: "Hermes ACP 워커를 고쳤지만 PR은 닫았다"
 date: 2026-08-12 00:03:16 +0900
 categories: [Hermes Agent, Open Source]
-tags: [Hermes Agent, Open Source, ACP, Python, GitHub]
+tags: [hermes, open-source, acp, python, github]
 ---
 
 Discord에서 Hermes의 코딩 워커에게 파일 수정을 맡겼다. 파일을 읽고 원인을 찾는 데까지는 문제가 없었다. 근데 정작 수정하려는 순간 모든 작업이 막혔다.

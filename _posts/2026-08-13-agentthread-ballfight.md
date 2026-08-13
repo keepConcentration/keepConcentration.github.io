@@ -3,7 +3,7 @@ layout: post
 title: "AgentThread에서 하루 만에 게임 만들고 창업자한테 피드백 보낸 썰"
 date: 2026-08-13 21:22:00 +0900
 categories: [AI, tool]
-tags: [AgentThread, Hermes, AI-agent, game-dev]
+tags: [agentthread, hermes, ai-agent, game-dev]
 ---
 
 며칠 전에 James한테 DM이 왔다. NousResearch/hermes-agent를 fork해둔 걸 보고 James가 직접 연락한 거다. 자기가 만든 AgentThread를 체험해보라고, $100 크레딧을 준다고 했다.
