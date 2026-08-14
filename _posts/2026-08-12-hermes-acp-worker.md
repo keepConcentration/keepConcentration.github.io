@@ -2,7 +2,7 @@
 layout: post
 title: "Hermes ACP 워커를 고쳤지만 PR은 닫았다"
 date: 2026-08-12 00:03:16 +0900
-categories: [Hermes Agent, Open Source]
+categories: [hermes-agent, open-source]
 tags: [hermes, open-source, acp, python, github]
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Spring Data redis와 jackson: record와 stream.tolist()의 직렬화 함정 해결하기"
 date: 2026-07-31 10:00:00 +0900
-categories: [Java, redis]
+categories: [java, redis]
 tags: [jackson, redis, springdataredis, record, 직렬화, stream.tolist, 캐시]
 ---
 

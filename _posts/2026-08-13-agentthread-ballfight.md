@@ -2,7 +2,7 @@
 layout: post
 title: "AgentThread에서 하루 만에 게임 만들고 창업자한테 피드백 보낸 썰"
 date: 2026-08-13 21:22:00 +0900
-categories: [AI, tool]
+categories: [ai, tool]
 tags: [agentthread, hermes, ai-agent, game-dev]
 ---
 
