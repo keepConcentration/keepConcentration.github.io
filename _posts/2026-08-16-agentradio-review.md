@@ -1,10 +1,9 @@
 ---
 layout: post
 title: "친구가 추천한 AgentRadio, 까보고 도입을 접은 썰"
-date: 2026-08-13 20:00:00 +0900
+date: 2026-08-16 16:30:00 +0900
 categories: [ai, tool]
 tags: [agentradio, hermes, multi-agent]
-published: false
 ---
 
 친구가 링크 하나를 보냈다. AgentRadio라는 프로젝트다. 재밌다고 했다. 그래서 내가 까봤다.
