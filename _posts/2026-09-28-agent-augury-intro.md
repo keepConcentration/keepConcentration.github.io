@@ -12,7 +12,7 @@ tags: [agent-augury, multi-agent, local-ai, python, hitl]
 2. 모델 가리지 않는 로컬 멀티에이전트 런타임, agent-augury
 -->
 
-친구가 AgentRadio를 추천했다. 까봤다. 그 이야기는 [이전 글](/2026/08/16/agentradio-review/)에 썼다.
+친구가 AgentRadio를 추천했다. 까봤다. 그 이야기는 [이전 글](/ai/tool/2026/08/16/agentradio-review.html)에 썼다.
 
 그 글에서는 Hermes 워크플로우랑 안 맞아서 도입을 접었다고 했다. 근데 그걸로 끝이 아니었다. 까보면서 느낀 불편이 따로 남았다.
 
