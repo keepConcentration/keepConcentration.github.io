@@ -80,4 +80,4 @@ AgentRadio에서 느낀 한계랑 대비하면 이렇게 정리된다. 모델 �
 
 코드와 문서는 여기 있다.
 
-[https://github.com/keepConcentration/agent-augury](https://github.com/keepConcentration/agent-augury)
+[https://github.com/keepConcentration/agent-augury](https://github.com/keepConcentration/agent-augury){:target="_blank" rel="noopener"}

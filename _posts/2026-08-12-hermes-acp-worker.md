@@ -218,10 +218,10 @@ scripts/run_tests.sh tests/agent/test_copilot_acp_client.py -q
 
 ## 관련 링크
 
-- [Hermes Agent](https://github.com/NousResearch/hermes-agent)
-- [Issue #17284 — permission request gets cancelled](https://github.com/NousResearch/hermes-agent/issues/17284)
-- [PR #17285 — follow-up prompt 재전송 (Closed)](https://github.com/NousResearch/hermes-agent/pull/17285)
-- [PR #17604 — reasoning text fallback (Stale)](https://github.com/NousResearch/hermes-agent/pull/17604)
-- [먼저 열린 PR #83205](https://github.com/NousResearch/hermes-agent/pull/83205)
-- [내가 닫은 PR #83958](https://github.com/NousResearch/hermes-agent/pull/83958)
-- [ACP Tool Calls and Permission Requests](https://agentclientprotocol.com/protocol/v1/tool-calls)
+- [Hermes Agent](https://github.com/NousResearch/hermes-agent){:target="_blank" rel="noopener"}
+- [Issue #17284 — permission request gets cancelled](https://github.com/NousResearch/hermes-agent/issues/17284){:target="_blank" rel="noopener"}
+- [PR #17285 — follow-up prompt 재전송 (Closed)](https://github.com/NousResearch/hermes-agent/pull/17285){:target="_blank" rel="noopener"}
+- [PR #17604 — reasoning text fallback (Stale)](https://github.com/NousResearch/hermes-agent/pull/17604){:target="_blank" rel="noopener"}
+- [먼저 열린 PR #83205](https://github.com/NousResearch/hermes-agent/pull/83205){:target="_blank" rel="noopener"}
+- [내가 닫은 PR #83958](https://github.com/NousResearch/hermes-agent/pull/83958){:target="_blank" rel="noopener"}
+- [ACP Tool Calls and Permission Requests](https://agentclientprotocol.com/protocol/v1/tool-calls){:target="_blank" rel="noopener"}

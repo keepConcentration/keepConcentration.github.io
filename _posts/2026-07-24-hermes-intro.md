@@ -132,5 +132,5 @@ OpenClaw가 에이전트 한 마리 잘 키우는 쪽이라면, Hermes는 에이
 그래도 칸반으로 일을 나눠 보는 맛은 확실히 있다.
 에이전트 여러 마리를 보드에 올려두고 굴려보고 싶은 사람이면, 한 번 만져볼 만하다.
 
-- 공식 문서: <https://hermes-agent.nousresearch.com/docs>
-- GitHub: <https://github.com/nousresearch/hermes-agent>
+- 공식 문서: [https://hermes-agent.nousresearch.com/docs](https://hermes-agent.nousresearch.com/docs){:target="_blank" rel="noopener"}
+- GitHub: [https://github.com/nousresearch/hermes-agent](https://github.com/nousresearch/hermes-agent){:target="_blank" rel="noopener"}

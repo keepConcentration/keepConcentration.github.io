@@ -33,9 +33,9 @@ HERMES_ACP_AUTH_METHOD=cursor_login
 
 ## 이슈 제보
 
-레포를 뒤져보니 비슷한 문제를 다룬 이슈가 세 개 있었다. [#68367](https://github.com/NousResearch/hermes-agent/issues/68367)은 Desktop spawn 환경변수 상속, [#66930](https://github.com/NousResearch/hermes-agent/issues/66930)은 bare 프로필에 Matrix credential 상속, [#61046](https://github.com/NousResearch/hermes-agent/issues/61046)은 multi-profile gateway에서 `.env`를 아예 못 읽는 문제였다. 전부 "격리 누수"라는 공통점은 있지만, 내가 겪은 건 CLI/게이트웨이 재시작 시 ACP 설정이 새는 케이스라 기존 이슈들과는 결이 달랐다.
+레포를 뒤져보니 비슷한 문제를 다룬 이슈가 세 개 있었다. [#68367](https://github.com/NousResearch/hermes-agent/issues/68367){:target="_blank" rel="noopener"}은 Desktop spawn 환경변수 상속, [#66930](https://github.com/NousResearch/hermes-agent/issues/66930){:target="_blank" rel="noopener"}은 bare 프로필에 Matrix credential 상속, [#61046](https://github.com/NousResearch/hermes-agent/issues/61046){:target="_blank" rel="noopener"}은 multi-profile gateway에서 `.env`를 아예 못 읽는 문제였다. 전부 "격리 누수"라는 공통점은 있지만, 내가 겪은 건 CLI/게이트웨이 재시작 시 ACP 설정이 새는 케이스라 기존 이슈들과는 결이 달랐다.
 
-게다가 ACP 관련 키들은 `OPTIONAL_ENV_VARS`에도 등록이 안 되어 있어서, 기존 클린업 로직으로는 아예 잡히지도 않는 상태였다. 새 이슈로 파기로 하고 [#75141](https://github.com/NousResearch/hermes-agent/issues/75141)을 열었다.
+게다가 ACP 관련 키들은 `OPTIONAL_ENV_VARS`에도 등록이 안 되어 있어서, 기존 클린업 로직으로는 아예 잡히지도 않는 상태였다. 새 이슈로 파기로 하고 [#75141](https://github.com/NousResearch/hermes-agent/issues/75141){:target="_blank" rel="noopener"}을 열었다.
 
 이슈에 포함한 내용:
 - 버그 설명과 기존 이슈와의 차이점
@@ -126,14 +126,14 @@ if line.startswith("export "):
 
 ## 통합 머지: PR 3개가 하나로
 
-며칠 뒤, 메인테이너가 새로운 PR을 열었다. [#76462](https://github.com/NousResearch/hermes-agent/pull/76462) "fix(secrets): finish profile secret-scope migration."
+며칠 뒤, 메인테이너가 새로운 PR을 열었다. [#76462](https://github.com/NousResearch/hermes-agent/pull/76462){:target="_blank" rel="noopener"} "fix(secrets): finish profile secret-scope migration."
 
 이 PR은 **같은 문제 영역(프로필 credential 격리)을 다루던 3개의 PR을 한데 모아 통합**하는 PR이었다:
 
 | 원본 PR | 작성자 | 내용 |
 |---------|--------|------|
-| [#67065](https://github.com/NousResearch/hermes-agent/pull/67065) | @webtecnica | `get_env_value()` scope-aware |
-| [#51604](https://github.com/NousResearch/hermes-agent/pull/51604) | @JoaoMarcos44 | Anthropic adapter credential isolation |
+| [#67065](https://github.com/NousResearch/hermes-agent/pull/67065){:target="_blank" rel="noopener"} | @webtecnica | `get_env_value()` scope-aware |
+| [#51604](https://github.com/NousResearch/hermes-agent/pull/51604){:target="_blank" rel="noopener"} | @JoaoMarcos44 | Anthropic adapter credential isolation |
 | **#75197** | **@keepConcentration** | **ACP env scrub** |
 
 내 코드는 **cherry-pick**되어 #76462에 그대로 포함됐다. 커밋 히스토리에 내 계정이 co-author로 찍혀 있고, PR 본문에도 "Cherry-picked from #75197 (@keepConcentration)"라고 명시되어 있다.
@@ -174,7 +174,7 @@ the vector from #75141.
 
 **관련 링크:**
 
-- [Issue #75141 — Profile `.env` does not clear inherited Hermes env vars](https://github.com/NousResearch/hermes-agent/issues/75141)
-- [PR #75197 — fix(env): clear inherited Hermes keys missing from profile `.env` (ACP leak)](https://github.com/NousResearch/hermes-agent/pull/75197)
-- [PR #76462 — fix(secrets): finish profile secret-scope migration](https://github.com/NousResearch/hermes-agent/pull/76462)
-- [Hermes Agent Repository](https://github.com/NousResearch/hermes-agent)
+- [Issue #75141 — Profile `.env` does not clear inherited Hermes env vars](https://github.com/NousResearch/hermes-agent/issues/75141){:target="_blank" rel="noopener"}
+- [PR #75197 — fix(env): clear inherited Hermes keys missing from profile `.env` (ACP leak)](https://github.com/NousResearch/hermes-agent/pull/75197){:target="_blank" rel="noopener"}
+- [PR #76462 — fix(secrets): finish profile secret-scope migration](https://github.com/NousResearch/hermes-agent/pull/76462){:target="_blank" rel="noopener"}
+- [Hermes Agent Repository](https://github.com/NousResearch/hermes-agent){:target="_blank" rel="noopener"}

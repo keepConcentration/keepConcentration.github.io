@@ -91,4 +91,4 @@ AI랑 게임 만드는 게 하루 만에 되는 시대다. 근데 아직 프로�
 
 ## 관련 링크
 
-- [AgentThread](https://agentthread.ai)
+- [AgentThread](https://agentthread.ai){:target="_blank" rel="noopener"}

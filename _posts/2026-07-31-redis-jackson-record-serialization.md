@@ -6,9 +6,9 @@ categories: [java, redis]
 tags: [jackson, redis, springdataredis, record, 직렬화, stream.tolist, 캐시]
 ---
 
-회사에서 redis 캐시를 붙이다가 jackson 직렬화에서 한 번 크게 걸렸다. 파고들다 보니 [Spring Data redis #2697](https://github.com/spring-projects/spring-data-redis/issues/2697)까지 갔고, 거기서 내가 쓴 해결법을 댓글로 남겼다.
+회사에서 redis 캐시를 붙이다가 jackson 직렬화에서 한 번 크게 걸렸다. 파고들다 보니 [Spring Data redis #2697](https://github.com/spring-projects/spring-data-redis/issues/2697){:target="_blank" rel="noopener"}까지 갔고, 거기서 내가 쓴 해결법을 댓글로 남겼다.
 
-시간이 지나서 우연히 본 건데, 모르는 오픈소스 프로젝트([goods-wms #37](https://github.com/2026-KB-WMS/goods-wms/pull/37))가 그 이슈를 인용하면서 같은 문제를 풀고 있더라. 내 댓글이 누군가의 설계 근거가 된 거다.
+시간이 지나서 우연히 본 건데, 모르는 오픈소스 프로젝트([goods-wms #37](https://github.com/2026-KB-WMS/goods-wms/pull/37){:target="_blank" rel="noopener"})가 그 이슈를 인용하면서 같은 문제를 풀고 있더라. 내 댓글이 누군가의 설계 근거가 된 거다.
 
 그래서 record랑 `stream.tolist()`가 어떻게 직렬화에서 충돌하는지, 어떻게 풀었는지, 그리고 "기여는 코드만이 아니다"는 생각을 정리해본다.
 
@@ -145,7 +145,7 @@ objectMapper.activateDefaultTyping(
 
 ## Spring Data redis #2697에서의 이야기
 
-이 문제는 Spring Data redis 이슈에서도 꽤 길게 논의됐다. [spring-projects/spring-data-redis#2697](https://github.com/spring-projects/spring-data-redis/issues/2697)에서 `mp911de`는 이렇게 설명했다.
+이 문제는 Spring Data redis 이슈에서도 꽤 길게 논의됐다. [spring-projects/spring-data-redis#2697](https://github.com/spring-projects/spring-data-redis/issues/2697){:target="_blank" rel="noopener"}에서 `mp911de`는 이렇게 설명했다.
 
 > "The difference between the two values is that the `ArrayList` variant is non-final while `stream.tolist()` produces a final and private type `ImmutableCollections$ListN`. The typing mechanism skips adding type hints if the type is `final` and originates from the `java.` namespace..."
 
@@ -167,11 +167,11 @@ void serializingDeserializingIntegerListIsHandledCorrectly() {
 
 ## 우연한 발견: 댓글이 다른 프로젝트에 닿았다
 
-시간이 지나서 [goods-wms #37](https://github.com/2026-KB-WMS/goods-wms/pull/37) PR을 발견했다. 나와는 상관없는 프로젝트인데, PR 본문에 spring-data-redis #2697을 관련 이슈로 적어두고 있었다.
+시간이 지나서 [goods-wms #37](https://github.com/2026-KB-WMS/goods-wms/pull/37){:target="_blank" rel="noopener"} PR을 발견했다. 나와는 상관없는 프로젝트인데, PR 본문에 spring-data-redis #2697을 관련 이슈로 적어두고 있었다.
 
 > "문제 2. `stream.tolist()`, `List.of()`: 불변 내부 구현체가 캐시에 노출"
 >
-> > 관련 이슈: [spring-data-redis #2697](https://github.com/spring-projects/spring-data-redis/issues/2697)
+> > 관련 이슈: [spring-data-redis #2697](https://github.com/spring-projects/spring-data-redis/issues/2697){:target="_blank" rel="noopener"}
 
 그 PR 작성자는 #2697 논의를 읽고 같은 문제를 자기 쪽에서 푼 거였다. `recordSupportingTypeResolver` 설계 근거로도 그 이슈가 나왔다.
 
@@ -193,9 +193,9 @@ void serializingDeserializingIntegerListIsHandledCorrectly() {
 
 참고 자료:
 
-- [Spring Data redis #2697. Genericjackson2JsonredisSerializer can't deserialize previously serialized stream.tolist()](https://github.com/spring-projects/spring-data-redis/issues/2697)
-- [goods-wms #37. redis 직렬화 전략을 EVERYTHING에서 recordSupportingTypeResolver와 WRAPPER_ARRAY로 교체](https://github.com/2026-KB-WMS/goods-wms/pull/37)
-- [jackson-databind #3404](https://github.com/FasterXML/jackson-databind/issues/3404)
-- [jackson-databind #3344](https://github.com/FasterXML/jackson-databind/issues/3344)
-- [jackson-databind #4849](https://github.com/FasterXML/jackson-databind/issues/4849)
-- [jackson-databind #5223](https://github.com/FasterXML/jackson-databind/issues/5223)
+- [Spring Data redis #2697. Genericjackson2JsonredisSerializer can't deserialize previously serialized stream.tolist()](https://github.com/spring-projects/spring-data-redis/issues/2697){:target="_blank" rel="noopener"}
+- [goods-wms #37. redis 직렬화 전략을 EVERYTHING에서 recordSupportingTypeResolver와 WRAPPER_ARRAY로 교체](https://github.com/2026-KB-WMS/goods-wms/pull/37){:target="_blank" rel="noopener"}
+- [jackson-databind #3404](https://github.com/FasterXML/jackson-databind/issues/3404){:target="_blank" rel="noopener"}
+- [jackson-databind #3344](https://github.com/FasterXML/jackson-databind/issues/3344){:target="_blank" rel="noopener"}
+- [jackson-databind #4849](https://github.com/FasterXML/jackson-databind/issues/4849){:target="_blank" rel="noopener"}
+- [jackson-databind #5223](https://github.com/FasterXML/jackson-databind/issues/5223){:target="_blank" rel="noopener"}
