@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "SI에도 FDE 같은 직무가 나오지 않을까"
-date: 2026-11-09 18:00:00 +0900
+date: 2026-11-09 23:54:04 +0900
 categories: [ai, career]
 tags: [fde, si, multi-agent, harness, spring-ai, requirements]
 ---
@@ -11,13 +11,13 @@ tags: [fde, si, multi-agent, harness, spring-ai, requirements]
 그러면 SI에도 곧 이런 직무가 나오지 않을까.
 
 계기는 두 개다.
-하나는 친구가 보내 준 채널톡 FDE 팀 인터뷰다. 다른 하나는 9월부터 11월까지 들은 [오픈소스 AI·SW 활용 인재 양성 과정](https://www.aioss.ac/module2) 강의다.
+하나는 친구가 보내 준 채널톡 FDE 팀 인터뷰다. 다른 하나는 9월부터 11월까지 들은 [오픈소스 AI·SW 활용 인재 양성 과정](https://www.aioss.ac/module2){:target="_blank" rel="noopener"} 강의다.
 
 ## FDE는 뭐가 다른가
 
 FDE는 Forward Deployed Engineer의 줄임말이다. Palantir에서 쓰면서 퍼진 말이다. 원래 고객 현장에 직접 들어가 일하는 데서 나온 이름인데, 요즘은 원격으로 고객과 붙어 일해도 FDE라고 부른다.
 
-[채널톡 FDE 팀 인터뷰](https://channel.io/kr/team/blog/articles/channel-fde-team-interview-f67c99b5)는 FDE 팀을 "고객 현장에서 문제를 찾고, 그걸 제품으로 풀어내는 팀"이라고 소개한다.
+[채널톡 FDE 팀 인터뷰](https://channel.io/kr/team/blog/articles/channel-fde-team-interview-f67c99b5){:target="_blank" rel="noopener"}는 FDE 팀을 "고객 현장에서 문제를 찾고, 그걸 제품으로 풀어내는 팀"이라고 소개한다.
 FDE는 고객사마다 PoC를 하고 문제를 진단하고 커스터마이징을 한다. 프리세일즈부터 계약 후 세팅까지 맡는다.
 
 여기까지는 예전의 파견 커스터마이징과 같다. 자사 제품을 들고 고객사에 가서 그 고객에 맞게 고쳐 준다.
